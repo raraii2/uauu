@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #container {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        #sim {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        #nao {
+            background-color: #f44336;
+            color: #ffffff;
+        }
+
+        #mensagem {
+            display: none;
+            margin-top: 20px;
+        }
+
+        #mensagem p {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Pedido de Namoro</h1>
+        <p>Você aceita namorar comigo?</p>
+
+        <button id="sim" onclick="mostrarMensagem('sim')">Sim</button>
+        <button id="nao" onclick="mostrarMensagem('nao')">Não</button>
+
+    <div id="mensagem">
+        <p>Obrigado por ser minha oficialmente, tenho muito a que falar 
+mas o melhor de tudo é que você é espetacular, e eu quero fazer tudo diferente, quero cuidar
+de voce, fazer voce passar raiva e principalmente fazer vc se sentir amada, gosto tanto de voce 
+garota de verdade, Eu te amo!!! quero te ver logo, estou muito feliz em ter que contar com voce, nessa data 
+tao incrivel. 21.11. Não me machuque. </p>
+    </div>
+
+    <script>
+        function mostrarMensagem(resposta) {
+            var mensagem = document.getElementById('mensagem');
+
+            if (resposta === 'sim') {
+                mensagem.style.display = 'block';
+            } else {
+                alert('Que pena! Espero que possamos continuar amigos.');
+            }
+        }
+    </script>
+</body>
+</html>
+
